@@ -14,7 +14,7 @@
     <h1 align="center" >Book a call</h1><br>
     <h3 style="text-align:center">Book a call slot and our representative will call you within 1 hour of the selected time</h3><br><hr>
     
-    <form action="#" onsubmit="registerUser()">
+    <form action="#" onsubmit="registerUser(event)">
         <label>Name of the pataeint:</label><br>
         <input type="text" id="name" size="50" required><br>
         <label>Enter your email:</label><br>
@@ -28,12 +28,20 @@
       </form>
 
       <script>
-        function registerUser(){
-            console.log(document.getElementById('name').value);
-            console.log(document.getElementById('email').value);
-            console.log(document.getElementById('phone').value);
-            console.log(document.getElementById('date').value);
-            console.log(document.getElementById('time').value);
+        function registerUser(e){
+            e.preventDefault();
+            const name = e.target.name.value;
+            const email = e.target.email.value;
+            const phoneNumber = e.target.phone.value;
+            const date = e.target.date.value;
+            const time = e.target.time.value;
+            
+            localStorage.setItem('name of the patient', name);
+            localStorage.setItem('email Id of the pateint', email);
+            localStorage.setItem('phoneNumber of the patient', phoneNumber);
+            localStorage.setItem('date of the appointment', date);
+            localStorage.setItem('time of appointment', time);
+            
         }
       </script>
 </body>
