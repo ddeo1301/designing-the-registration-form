@@ -6,15 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        h1   {color:brown;}
-        form {text-align: center;}
+         html,body {
+             /* background-image: url("https://mdbootstrap.com/img/new/fluid/city/018.jpg"); */
+             background-image: url("https://tse4.mm.bing.net/th?id=OIP.XTsq9wy9jsVs842LPOlKLgHaE8&pid=Api&P=0");
+        }
+        form{
+            text-align: center;
+        }
+        /* h1   {
+            color:brown;
+            background-color: aquamarine;
+        }
+        h3{
+            color: cadetblue;
+            background-color: hotpink;
+        }
+        form {
+            text-align: center;
+            color:darkmagenta;
+            background-color: deepskyblue;
+        } */
+
     </style>
 </head>
 <body>
     <h1 align="center" >Book a call</h1><br>
     <h3 style="text-align:center">Book a call slot and our representative will call you within 1 hour of the selected time</h3><br><hr>
     
-    <form action="#" onsubmit="registerUser(event)">
+    <form action="#" onsubmit="registerUser(event)" id="listOfItem">
         <label>Name of the pataeint:</label><br>
         <input type="text" id="name" size="50" required><br>
         <label>Enter your email:</label><br>
@@ -27,22 +46,6 @@
         <input type="submit" value="Get a Call">
       </form>
 
-      <script>
-        function registerUser(e){
-            e.preventDefault();
-            const name = e.target.name.value;
-            const email = e.target.email.value;
-            const phoneNumber = e.target.phone.value;
-            const date = e.target.date.value;
-            const time = e.target.time.value;
-            
-            localStorage.setItem('name of the patient', name);
-            localStorage.setItem('email Id of the pateint', email);
-            localStorage.setItem('phoneNumber of the patient', phoneNumber);
-            localStorage.setItem('date of the appointment', date);
-            localStorage.setItem('time of appointment', time);
-            
-        }
-      </script>
+      <script src="dom.js"></script>
 </body>
 </html>
